@@ -83,7 +83,7 @@ function render() {
   setupEventListeners();
 }
 
-function renderHeroSection() {
+function renderHeroSection(): string {
   return `
     <div class="hero-section animate-fade">
       <div class="hero-content">
@@ -99,8 +99,8 @@ function renderHeroSection() {
         </div>
       </div>
       <div class="hero-visual">
-        <div class="product-visual" style="max-width: 400px; margin: 0 auto;">
-          <img src="https://gorgeous-coral-prr1snrdjb.edgeone.app/1776014531981.png">
+        <div class="product-visual" style="max-width: 400px; margin: 0 auto; position: relative;">
+          <img src="hero-can.jpg" alt="Detox Lab Gond Katira Can" style="width: 100%; height: auto; display: block; filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5));">
           <div class="product-overlay">
             <p>Detox with a refill</p>
             <h1>Gond Katira & <br>Mint</h1>
@@ -110,13 +110,12 @@ function renderHeroSection() {
     </div>
   `;
 }
-
-function renderOrderSection() {
+function renderOrderSection(): string {
   return `
     <div class="grid">
       <div class="product-info">
-        <div class="product-visual">
-          <img src="https://fragile-indigo-j2oym73ra5.edgeone.app/37581.png">
+        <div class="product-visual" style="position: relative;">
+          <img src="hero-can.jpg" alt="Detox Lab Can" style="width: 100%; height: auto; border-radius: 12px;">
           <div class="product-overlay">
             <p>Detox with a refill</p>
             <h1>Gond Katira & <br>Mint</h1>
@@ -145,68 +144,8 @@ function renderOrderSection() {
           </div>
         </div>
       </div>
-
-      <div class="order-form">
-        <div class="form-header">
-          <h2>Customize Order</h2>
-          <div class="price-tag">Rs ${PRODUCT_PRICE}</div>
-        </div>
-
-        <div class="control-group">
-          <label class="control-label">Quantity</label>
-          <div class="qty-controls">
-            <button class="qty-btn" id="qty-minus">-</button>
-            <span class="qty-val">${state.quantity}</span>
-            <button class="qty-btn" id="qty-plus">+</button>
-          </div>
-        </div>
-
-        <div class="control-group">
-          <label class="control-label">Sweetness Level</label>
-          <div class="options-grid">
-            ${['None', 'Low', 'Regular'].map(level => `
-              <button class="option-btn ${state.sweetness === level ? 'active' : ''}" data-level="${level}">${level}</button>
-            `).join('')}
-          </div>
-        </div>
-
-        <div class="control-group">
-          <label class="control-label">Free Add-ons</label>
-          <div class="addons-flex">
-            ${['Extra Mint', 'Extra Lemon', 'Chia Seeds', 'No Black Salt'].map(addon => `
-              <button class="addon-pill ${state.addons.includes(addon) ? 'active' : ''}" data-addon="${addon}">${addon}</button>
-            `).join('')}
-          </div>
-        </div>
-
-        <hr style="border: none; border-top: 1px solid var(--stone-200); margin: 1rem 0;">
-
-        <div class="control-group">
-          <label class="control-label">Delivery Details</label>
-          <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-            <div>
-              <input type="text" placeholder="Full Name" class="input-field" id="name-input" value="${state.name}">
-              <div class="error-msg" id="name-error">Please enter your full name (min 2 characters).</div>
-            </div>
-            <div>
-              <input type="tel" placeholder="Phone Number" class="input-field" id="phone-input" value="${state.phone}">
-              <div class="error-msg" id="phone-error">Please enter a valid phone number (min 10 digits).</div>
-            </div>
-            <div>
-              <textarea placeholder="Complete Delivery Address" rows="3" class="input-field" id="address-input">${state.address}</textarea>
-              <div class="error-msg" id="address-error">Please enter a complete address (min 10 characters).</div>
-            </div>
-          </div>
-        </div>
-
-        <button class="checkout-btn" id="checkout-btn">
-          ORDER NOw • Rs ${PRODUCT_PRICE * state.quantity}
-        </button>
-      </div>
-    </div>
-  `;
+      `;
 }
-
 function renderTrackingSection() {
   return `
     <div class="tracking-container animate-fade">
