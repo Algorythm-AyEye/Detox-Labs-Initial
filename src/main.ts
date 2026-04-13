@@ -83,7 +83,7 @@ function render() {
   setupEventListeners();
 }
 
-function renderHeroSection() {
+function renderHeroSection(): string {
   return `
     <div class="hero-section animate-fade">
       <div class="hero-content">
@@ -99,8 +99,8 @@ function renderHeroSection() {
         </div>
       </div>
       <div class="hero-visual">
-        <div class="product-visual" style="max-width: 400px; margin: 0 auto;">
-          <img src="bg.jpg" alt="Detox Lab Can">
+        <div class="product-visual" style="max-width: 400px; margin: 0 auto; position: relative;">
+          <img src="bg.jpg" alt="Detox Lab Hero Visual" style="width: 100%; height: auto; display: block; border-radius: 20px;">
           <div class="product-overlay">
             <p>Detox with a refill</p>
             <h1>Gond Katira & <br>Mint</h1>
