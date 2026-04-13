@@ -89,18 +89,27 @@ function renderHeroSection(): string {
       <div class="hero-content">
         <div class="hero-logo">
           <div class="logo-icon" style="width: 48px; height: 48px; font-size: 24px;">🌿</div>
-          <span style="text-transform: lowercase; font-weight: 800; font-size: 2rem;">detox lab.</span>
+          <span style="text-transform: lowercase; font-weight: 800; font-size: 2rem; color: white;">detox lab.</span>
         </div>
-        <h1 class="hero-title">Revitalize Your Body with Nature's Best</h1>
-        <p class="hero-subtitle">Experience the refreshing blend of Gond Katira & Mint. Handcrafted for your skin glow and gut health.</p>
+        <h1 class="hero-title" style="color: white;">Revitalize Your Body with Nature's Best</h1>
+        <p class="hero-subtitle" style="color: rgba(255,255,255,0.8);">Experience the refreshing blend of Gond Katira & Mint. Handcrafted for your skin glow and gut health.</p>
         <div class="hero-actions">
           <button class="hero-btn primary" id="hero-order-btn">Order Now • Rs 300</button>
           <button class="hero-btn secondary" id="hero-track-btn">Track Existing Order</button>
         </div>
       </div>
       <div class="hero-visual">
-        <div class="product-visual" style="max-width: 400px; margin: 0 auto; position: relative; border: 2px solid rgba(255,255,255,0.1);">
-          <img src="/bg.jpg" alt="Hero" style="width: 100%; height: auto; display: block; opacity: 1 !important;">
+        <div class="product-visual" style="
+          max-width: 400px; 
+          margin: 0 auto; 
+          position: relative; 
+          aspect-ratio: 4/5; 
+          border-radius: 24px; 
+          background-image: url('bg.jpg'); 
+          background-size: cover; 
+          background-position: center;
+          border: 1px solid rgba(255,255,255,0.1);
+        ">
           <div class="product-overlay">
             <p>Detox with a refill</p>
             <h1>Gond Katira & <br>Mint</h1>
