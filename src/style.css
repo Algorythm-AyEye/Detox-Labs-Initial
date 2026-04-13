@@ -43,7 +43,6 @@ body {
   z-index: -1;
   .leaf-bg {
   background-image: url('bg.jpg');
-}
   background-size: cover;
   background-position: center;
   filter: blur(4px) brightness(0.85);
