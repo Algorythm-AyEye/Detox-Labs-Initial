@@ -100,7 +100,7 @@ function renderHeroSection() {
       </div>
       <div class="hero-visual">
         <div class="product-visual" style="max-width: 400px; margin: 0 auto;">
-          <img src="https://gorgeous-coral-prr1snrdjb.edgeone.app/1776014531981.png">
+          <img src="bg.jpg" alt="Detox Lab Can">
           <div class="product-overlay">
             <p>Detox with a refill</p>
             <h1>Gond Katira & <br>Mint</h1>
