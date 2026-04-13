@@ -41,13 +41,15 @@ body {
   position: fixed;
   inset: 0;
   z-index: -1;
-  .leaf-bg {
-  background-image: url('bg.jpg');
+  /* Points to the file you uploaded to GitHub */
+  background-image: url('bg.jpg'); 
   background-size: cover;
   background-position: center;
-  filter: blur(4px) brightness(0.85);
-  transform: scale(1.02); /* Prevent white edges from blur */
-  opacity: 0.9;
+  /* We reduced the blur from 4px to 2px so the 'studio' feel remains visible */
+  filter: brightness(0.35) blur(2px); 
+  transform: scale(1.05); /* Slight scale up to hide blurred edges */
+  opacity: 1;
+  background-attachment: fixed;
 }
 
 .falling-leaves-container {
