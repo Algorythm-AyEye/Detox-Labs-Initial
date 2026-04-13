@@ -390,3 +390,24 @@ function createLeaf(container: HTMLElement, emojis: string[]) {
 
   container.appendChild(leaf);
 }
+
+// Add these lines at the very end of your file
+document.addEventListener('click', (event) => {
+    const target = event.target as HTMLElement;
+
+    // This handles the "Order Now" button click
+    if (target && target.id === 'hero-order-btn') {
+        const app = document.getElementById('app');
+        if (app) {
+            app.innerHTML = renderOrderPage();
+            // Scroll to top so they see the new image
+            window.scrollTo(0, 0);
+        }
+    }
+
+    // This handles the "Confirm Order" button on the second page
+    if (target && target.id === 'confirm-order') {
+        alert("Connecting to WhatsApp...");
+        // You can add your WhatsApp link logic here later!
+    }
+});
