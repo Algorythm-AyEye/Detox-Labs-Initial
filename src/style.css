@@ -41,7 +41,9 @@ body {
   position: fixed;
   inset: 0;
   z-index: -1;
-  background-image: url('https://gorgeous-coral-prr1snrdjb.edgeone.app/1776014531981.png');
+  .leaf-bg {
+  background-image: url('bg.jpg');
+}
   background-size: cover;
   background-position: center;
   filter: blur(4px) brightness(0.85);
