@@ -91,131 +91,59 @@ function renderHeroSection(): string {
           <div class="logo-icon" style="width: 48px; height: 48px; font-size: 24px;">🌿</div>
           <span style="text-transform: lowercase; font-weight: 800; font-size: 2.5rem; color: white;">detox lab.</span>
         </div>
-        
         <h1 class="hero-title" style="color: white; font-size: 3.5rem; font-weight: 800; line-height: 1.1; margin: 2rem 0 1rem 0;">
           Revitalize Your Body with Nature's Best
         </h1>
-        
         <p class="hero-subtitle" style="color: rgba(255,255,255,0.9); font-size: 1.25rem; margin-bottom: 2rem; max-width: 500px;">
           Experience the refreshing blend of Gond Katira & Mint. Handcrafted for your skin glow and gut health.
         </p>
-        
         <div class="hero-actions">
           <button class="hero-btn primary" id="hero-order-btn">Order Now • Rs 300</button>
-          <button class="hero-btn secondary" id="hero-track-btn" style="background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2);">Track Existing Order</button>
+          <button class="hero-btn secondary" id="hero-track-btn">Track Existing Order</button>
         </div>
       </div>
-
       <div class="hero-visual">
-        <div class="product-visual" style="max-width: 400px; margin: 0 auto; position: relative; aspect-ratio: 4/5; border-radius: 24px; overflow: hidden; background: #111; border: 1px solid rgba(255,255,255,0.1);">
-          
+        <div class="product-visual" style="max-width: 400px; margin: 0 auto; position: relative; aspect-ratio: 4/5; border-radius: 24px; overflow: hidden; background: #111;">
           <div class="hero-product-image"></div>
-          
-          <div class="product-overlay">
-            <p>Detox with a refill</p>
-            <h1>Gond Katira & <br>Mint</h1>
+          <div class="product-overlay" style="position: relative; z-index: 10; background: transparent !important;">
+            <p style="color: #a7f3d0; font-style: italic;">Detox with a refill</p>
+            <h1 style="color: white; text-shadow: 0 4px 15px rgba(0,0,0,0.8);">Gond Katira & <br>Mint</h1>
           </div>
         </div>
       </div>
     </div>
   `;
 }
-function renderOrderSection() {
+function renderOrderPage(): string {
   return `
-    <div class="grid">
-      <div class="product-info">
-        <div class="product-visual">
-          <img src="https://fragile-indigo-j2oym73ra5.edgeone.app/37581.png">
-          <div class="product-overlay">
-            <p>Detox with a refill</p>
-            <h1>Gond Katira & <br>Mint</h1>
-            <div class="product-meta">
-              <span>✨ Skin Glow</span>
-              <span>•</span>
-              <span>Revitalizing</span>
-              <span>•</span>
-              <span>330ml</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon">🌿</div>
-            <span>Natural<br>Ingredients</span>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">💧</div>
-            <span>Hydrating<br>Formula</span>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">🕒</div>
-            <span>Keep<br>Refrigerated</span>
-          </div>
+    <div class="order-page animate-fade" style="padding: 2rem; max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 3rem; justify-content: center;">
+      
+      <div class="product-preview" style="flex: 1; min-width: 300px; max-width: 450px;">
+        <div style="border-radius: 24px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1);">
+          <img src="ordersection.jpg" alt="Order Preview" style="width: 100%; height: auto; display: block;">
         </div>
       </div>
 
-      <div class="order-form">
-        <div class="form-header">
-          <h2>Customize Order</h2>
-          <div class="price-tag">Rs ${PRODUCT_PRICE}</div>
+      <div class="customize-container" style="flex: 1.2; min-width: 320px; max-width: 500px;">
+        <div class="customize-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+          <h2 style="margin: 0;">Customize Order</h2>
+          <span style="color: #4ade80; font-weight: 800; font-size: 1.5rem;">Rs 300</span>
         </div>
 
-        <div class="control-group">
-          <label class="control-label">Quantity</label>
-          <div class="qty-controls">
-            <button class="qty-btn" id="qty-minus">-</button>
-            <span class="qty-val">${state.quantity}</span>
-            <button class="qty-btn" id="qty-plus">+</button>
-          </div>
+        <div class="delivery-details">
+          <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem; margin-bottom: 1rem;">Enter your details to finish</p>
+          <input type="text" placeholder="Full Name" style="width: 100%; padding: 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.3); color: white; margin-bottom: 1rem;">
+          <input type="text" placeholder="WhatsApp Number" style="width: 100%; padding: 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.3); color: white; margin-bottom: 1rem;">
+          <textarea placeholder="Delivery Address" style="width: 100%; padding: 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.3); color: white; height: 100px; margin-bottom: 1.5rem;"></textarea>
         </div>
 
-        <div class="control-group">
-          <label class="control-label">Sweetness Level</label>
-          <div class="options-grid">
-            ${['None', 'Low', 'Regular'].map(level => `
-              <button class="option-btn ${state.sweetness === level ? 'active' : ''}" data-level="${level}">${level}</button>
-            `).join('')}
-          </div>
-        </div>
-
-        <div class="control-group">
-          <label class="control-label">Free Add-ons</label>
-          <div class="addons-flex">
-            ${['Extra Mint', 'Extra Lemon', 'Chia Seeds', 'No Black Salt'].map(addon => `
-              <button class="addon-pill ${state.addons.includes(addon) ? 'active' : ''}" data-addon="${addon}">${addon}</button>
-            `).join('')}
-          </div>
-        </div>
-
-        <hr style="border: none; border-top: 1px solid var(--stone-200); margin: 1rem 0;">
-
-        <div class="control-group">
-          <label class="control-label">Delivery Details</label>
-          <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-            <div>
-              <input type="text" placeholder="Full Name" class="input-field" id="name-input" value="${state.name}">
-              <div class="error-msg" id="name-error">Please enter your full name (min 2 characters).</div>
-            </div>
-            <div>
-              <input type="tel" placeholder="Phone Number" class="input-field" id="phone-input" value="${state.phone}">
-              <div class="error-msg" id="phone-error">Please enter a valid phone number (min 10 digits).</div>
-            </div>
-            <div>
-              <textarea placeholder="Complete Delivery Address" rows="3" class="input-field" id="address-input">${state.address}</textarea>
-              <div class="error-msg" id="address-error">Please enter a complete address (min 10 characters).</div>
-            </div>
-          </div>
-        </div>
-
-        <button class="checkout-btn" id="checkout-btn">
-          ORDER NOw • Rs ${PRODUCT_PRICE * state.quantity}
+        <button class="hero-btn primary" id="confirm-order" style="width: 100%; padding: 1.25rem; background: #22c55e; color: white; border: none; border-radius: 16px; font-weight: 700; cursor: pointer; font-size: 1.1rem;">
+          Confirm via WhatsApp
         </button>
       </div>
     </div>
   `;
 }
-
 function renderTrackingSection() {
   return `
     <div class="tracking-container animate-fade">
