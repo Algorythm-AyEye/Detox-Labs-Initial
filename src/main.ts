@@ -87,27 +87,15 @@ function renderHeroSection(): string {
   return `
     <div class="hero-section animate-fade">
       <div class="hero-content">
-        <div class="hero-logo">
-          <div class="logo-icon" style="width: 48px; height: 48px; font-size: 24px;">🌿</div>
-          <span style="text-transform: lowercase; font-weight: 800; font-size: 2rem; color: white;">detox lab.</span>
         </div>
-        <h1 class="hero-title" style="color: white; margin-top: 1.5rem;">Revitalize Your Body with Nature's Best</h1>
-        <p class="hero-subtitle" style="color: rgba(255,255,255,0.8);">Experience the refreshing blend of Gond Katira & Mint. Handcrafted for your skin glow and gut health.</p>
-        <div class="hero-actions">
-          <button class="hero-btn primary" id="hero-order-btn">Order Now • Rs 300</button>
-          <button class="hero-btn secondary" id="hero-track-btn">Track Existing Order</button>
-        </div>
-      </div>
       <div class="hero-visual">
         <div class="product-visual" style="max-width: 400px; margin: 0 auto; position: relative; aspect-ratio: 4/5; border-radius: 24px; overflow: hidden; background: #111; border: 1px solid rgba(255,255,255,0.1);">
           
           <div class="hero-product-image"></div>
           
-          <div class="overall-overlay" style="position: absolute; inset: 0; background-color: rgba(0,0,0,0.3); z-index: 5;"></div>
-          
           <div class="product-overlay" style="z-index: 10; position: relative;">
             <p>Detox with a refill</p>
-            <h1>Gond Katira & <br>Mint</h1>
+            <h1 style="text-shadow: 0 3px 20px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,0.5);">Gond Katira & <br>Mint</h1>
           </div>
         </div>
       </div>
