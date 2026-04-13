@@ -117,45 +117,64 @@ function renderHeroSection(): string {
 
 function renderOrderPage(): string {
   return `
-    <div class="order-page animate-fade" style="padding: 2rem; max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 3rem; justify-content: center; min-height: 100vh;">
+    <div class="order-page animate-fade" style="
+      padding: 2rem; 
+      min-height: 100vh; 
+      background-image: url('./bg.jpg'); 
+      background-size: cover; 
+      background-position: center; 
+      background-attachment: fixed;
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 3rem; 
+      justify-content: center; 
+      align-items: flex-start;">
       
       <div class="product-preview" style="flex: 1; min-width: 300px; max-width: 450px;">
-        <div style="border-radius: 24px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); background: #111; min-height: 400px; display: flex; align-items: center; justify-content: center;">
+        <div style="border-radius: 24px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.1); background: #000;">
           <img src="./ordersection.jpg" 
                alt="Order Preview" 
                style="width: 100%; height: auto; display: block;"
-               onerror="this.src='bg.jpg'; this.style.opacity='0.5';">
+               onerror="this.src='./bg.jpg'; this.style.opacity='0.5';">
         </div>
       </div>
 
-      <div class="customize-container" style="flex: 1.2; min-width: 320px; max-width: 500px; background: rgba(255,255,255,0.05); backdrop-filter: blur(15px); padding: 2rem; border-radius: 24px; border: 1px solid rgba(255,255,255,0.1);">
-        <div class="customize-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
-          <h2 style="margin: 0; color: white; font-size: 1.8rem;">Customize Order</h2>
+      <div class="customize-container" style="
+        flex: 1.2; 
+        min-width: 320px; 
+        max-width: 500px; 
+        background: rgba(0, 0, 0, 0.6); 
+        backdrop-filter: blur(20px); 
+        -webkit-backdrop-filter: blur(20px); 
+        padding: 2.5rem; 
+        border-radius: 30px; 
+        border: 1px solid rgba(255,255,255,0.1);
+        color: white;">
+        
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+          <h2 style="margin: 0; font-size: 2rem;">Customize Order</h2>
           <span style="color: #4ade80; font-weight: 800; font-size: 1.5rem;">Rs 300</span>
         </div>
 
-        <div class="delivery-details">
-          <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem; margin-bottom: 1rem;">Enter delivery details</p>
-          
+        <div style="display: flex; flex-direction: column; gap: 1.2rem;">
           <input type="text" placeholder="Full Name" 
-                 style="width: 100%; padding: 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: white; margin-bottom: 1rem; outline: none;">
+                 style="width: 100%; padding: 16px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; font-size: 1rem;">
           
           <input type="text" placeholder="WhatsApp Number" 
-                 style="width: 100%; padding: 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: white; margin-bottom: 1rem; outline: none;">
+                 style="width: 100%; padding: 16px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; font-size: 1rem;">
           
           <textarea placeholder="Delivery Address" 
-                    style="width: 100%; padding: 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: white; height: 100px; margin-bottom: 1.5rem; outline: none; resize: none;"></textarea>
+                    style="width: 100%; padding: 16px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; height: 120px; font-size: 1rem; resize: none;"></textarea>
         </div>
 
         <button class="hero-btn primary" id="confirm-order" 
-                style="width: 100%; padding: 1.25rem; background: #22c55e; color: white; border: none; border-radius: 16px; font-weight: 700; cursor: pointer; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);">
+                style="width: 100%; margin-top: 2rem; padding: 1.25rem; background: #22c55e; color: white; border: none; border-radius: 18px; font-weight: 700; cursor: pointer; font-size: 1.2rem; transition: transform 0.2s;">
           Confirm via WhatsApp
         </button>
       </div>
     </div>
   `;
 }
-
 function renderTrackingSection() {
   return `
     <div class="tracking-container animate-fade">
