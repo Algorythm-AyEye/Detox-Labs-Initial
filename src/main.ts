@@ -103,7 +103,9 @@ function renderHeroSection(): string {
           
           <div class="hero-product-image"></div>
           
-          <div class="product-overlay">
+          <div class="overall-overlay" style="position: absolute; inset: 0; background-color: rgba(0,0,0,0.3); z-index: 5;"></div>
+          
+          <div class="product-overlay" style="z-index: 10; position: relative;">
             <p>Detox with a refill</p>
             <h1>Gond Katira & <br>Mint</h1>
           </div>
@@ -112,7 +114,6 @@ function renderHeroSection(): string {
     </div>
   `;
 }
-
 function renderOrderSection() {
   return `
     <div class="grid">
