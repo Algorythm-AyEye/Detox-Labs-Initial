@@ -692,3 +692,7 @@ footer {
 .hidden {
   display: none !important;
 }
+
+.hero-logo span, .logo span {
+  color: white !important;
+}
