@@ -117,13 +117,11 @@ function renderHeroSection(): string {
 
 
 function renderOrderPage(): string {
-  // We apply the background image directly in the style here.
-  // The './' prefix is crucial for Vercel's file system to locate the image in the root.
   return `
     <div class="order-page animate-fade" style="
       padding: 2rem; 
       min-height: 100vh; 
-      background-image: url('./bg.jpg'); 
+      background-image: url('bg.jpg'); 
       background-size: cover; 
       background-position: center; 
       background-attachment: fixed;
@@ -134,12 +132,10 @@ function renderOrderPage(): string {
       align-items: flex-start;">
       
       <div class="product-preview" style="flex: 1; min-width: 300px; max-width: 450px;">
-        <div style="border-radius: 24px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.1); background: #111;">
-          
-          <img src="./ordersection.jpg" 
+        <div style="border-radius: 24px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.1); background: #111; aspect-ratio: 1/1;">
+          <img src="ordersection.jpg" 
                alt="Order Preview" 
-               style="width: 100%; height: auto; display: block;" 
-               onerror="console.error('Missing: ordersection.jpg')">
+               style="width: 100%; height: 100%; object-fit: cover; display: block;">
         </div>
       </div>
 
@@ -147,30 +143,28 @@ function renderOrderPage(): string {
         flex: 1.2; 
         min-width: 320px; 
         max-width: 500px; 
-        background: #1f1f1f; /* Your specific dark grey theme color */
+        background: #1a1a1a; 
         padding: 2.5rem; 
         border-radius: 30px; 
-        border: 1px solid rgba(255,255,255,0.05);
+        border: 1px solid rgba(255,255,255,0.1);
         color: white;">
         
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
-          <h2 style="margin: 0; font-size: 2rem; color: white !important;">Customize Order</h2>
-          <span style="color: #4ade80 !important; font-weight: 800; font-size: 1.5rem;">Rs 300</span>
-        </div>
+        <h2 style="margin: 0 0 2rem 0; font-size: 2rem;">Customize Order</h2>
 
         <div style="display: flex; flex-direction: column; gap: 1.2rem;">
-          <input type="text" placeholder="Full Name" style="width: 100%; padding: 16px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); background: #111; color: white;">
-          <input type="text" placeholder="WhatsApp Number" style="width: 100%; padding: 16px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); background: #111; color: white;">
-          <textarea placeholder="Delivery Address" style="width: 100%; padding: 16px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); background: #111; color: white; height: 120px; resize: none;"></textarea>
+          <input type="text" placeholder="Full Name" style="width: 100%; padding: 16px; border-radius: 12px; border: 1px solid #333; background: #000; color: white;">
+          <input type="text" placeholder="WhatsApp Number" style="width: 100%; padding: 16px; border-radius: 12px; border: 1px solid #333; background: #000; color: white;">
+          <textarea placeholder="Delivery Address" style="width: 100%; padding: 16px; border-radius: 12px; border: 1px solid #333; background: #000; color: white; height: 120px; resize: none;"></textarea>
         </div>
 
-        <button class="hero-btn primary" id="confirm-order" style="width: 100%; margin-top: 2rem; padding: 1.25rem; background: #22c55e; color: white; border: none; border-radius: 16px; font-weight: 700; cursor: pointer; font-size: 1.2rem;">
+        <button class="hero-btn primary" id="confirm-order" style="width: 100%; margin-top: 2rem; padding: 1.25rem; background: #22c55e; color: white; border: none; border-radius: 16px; font-weight: 700; cursor: pointer;">
           Confirm via WhatsApp
         </button>
       </div>
     </div>
   `;
 }
+
 function renderTrackingSection() {
   return `
     <div class="tracking-container animate-fade">
