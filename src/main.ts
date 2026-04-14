@@ -115,13 +115,13 @@ function renderHeroSection(): string {
   `;
 }
 
-
 function renderOrderPage(): string {
   return `
     <div class="order-page animate-fade" style="
       padding: 2rem; 
       min-height: 100vh; 
-      background-image: url('bg.jpg'); 
+      /* Try the relative path with ./ */
+      background-image: url('./bg.jpg'); 
       background-size: cover; 
       background-position: center; 
       background-attachment: fixed;
@@ -133,7 +133,7 @@ function renderOrderPage(): string {
       
       <div class="product-preview" style="flex: 1; min-width: 300px; max-width: 450px;">
         <div style="border-radius: 24px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.1); background: #111; aspect-ratio: 1/1;">
-          <img src="ordersection.jpg" 
+          <img src="./ordersection.jpg" 
                alt="Order Preview" 
                style="width: 100%; height: 100%; object-fit: cover; display: block;">
         </div>
@@ -149,7 +149,7 @@ function renderOrderPage(): string {
         border: 1px solid rgba(255,255,255,0.1);
         color: white;">
         
-        <h2 style="margin: 0 0 2rem 0; font-size: 2.2rem; font-weight: 700;">Customize Order</h2>
+        <h2 style="margin: 0 0 2rem 0; font-size: 2.2rem; font-weight: 700; color: white;">Customize Order</h2>
 
         <div style="display: flex; flex-direction: column; gap: 1.2rem;">
           <input type="text" placeholder="Full Name" style="width: 100%; padding: 16px; border-radius: 12px; border: 1px solid #333; background: #000; color: white;">
@@ -163,8 +163,7 @@ function renderOrderPage(): string {
       </div>
     </div>
   `;
-}
-function renderTrackingSection() {
+}function renderTrackingSection() {
   return `
     <div class="tracking-container animate-fade">
       <div class="tracking-header">
