@@ -149,7 +149,7 @@ function renderOrderPage(): string {
         border: 1px solid rgba(255,255,255,0.1);
         color: white;">
         
-        <h2 style="margin: 0 0 2rem 0; font-size: 2rem;">Customize Order</h2>
+        <h2 style="margin: 0 0 2rem 0; font-size: 2.2rem; font-weight: 700;">Customize Order</h2>
 
         <div style="display: flex; flex-direction: column; gap: 1.2rem;">
           <input type="text" placeholder="Full Name" style="width: 100%; padding: 16px; border-radius: 12px; border: 1px solid #333; background: #000; color: white;">
@@ -157,14 +157,13 @@ function renderOrderPage(): string {
           <textarea placeholder="Delivery Address" style="width: 100%; padding: 16px; border-radius: 12px; border: 1px solid #333; background: #000; color: white; height: 120px; resize: none;"></textarea>
         </div>
 
-        <button class="hero-btn primary" id="confirm-order" style="width: 100%; margin-top: 2rem; padding: 1.25rem; background: #22c55e; color: white; border: none; border-radius: 16px; font-weight: 700; cursor: pointer;">
+        <button class="hero-btn primary" id="confirm-order" style="width: 100%; margin-top: 2rem; padding: 1.25rem; background: #22c55e; color: white; border: none; border-radius: 16px; font-weight: 700; cursor: pointer; font-size: 1.2rem;">
           Confirm via WhatsApp
         </button>
       </div>
     </div>
   `;
 }
-
 function renderTrackingSection() {
   return `
     <div class="tracking-container animate-fade">
